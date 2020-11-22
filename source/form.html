@@ -26,15 +26,15 @@
     </nav>
   </header>
 
-  <main class="catalog__main">
+  <main class="page__main">
     <form class="form" action="https://echo.htmlacademy.ru" method="GET">
-      <h2 class="form__legend">
+      <h1 class="form__title">
         Подбор программы
-      </h2>
-      <h3 class="form__title">
+      </h1>
+      <h2 class="form__slogan">
         Заполните анкету, и мы подберем
         программу питания для вашего кота
-      </h3>
+      </h2>
       <fieldset class="form__group">
         <p>
           <label class="form__label" for="name">
@@ -56,18 +56,18 @@
         </p>
       </fieldset>
       <fieldset class="form__group">
-        <ul class="form__list--radio">
-          <li class="form__item--radio">
-            <input id="slim" name="option" class="options__checkbox visually-hidden" type="radio" checked>
-            <label class="options__label" for="slim">похудение</label>
+        <ul class="form__list">
+          <li class="form__item form__item--radio">
+            <input id="slim" name="option" class="form__input form__input--radio" type="radio" checked>
+            <label class="form__label form__label--radio" for="slim">похудение</label>
           </li>
-          <li class="form__item--radio">
-            <input id="gain" name="option" class="options__checkbox visually-hidden" type="radio">
-            <label class="options__label" for="gain">набор массы</label>
+          <li class="form__item form__item--radio">
+            <input id="gain" name="option" class="form__input form__input--radio" type="radio">
+            <label class="form__label form__label--radio" for="gain">набор массы</label>
           </li>
-          <li class="form__item--radio">
-            <input id="help" name="option" class="options__checkbox visually-hidden" type="radio">
-            <label class="options__label" for="help">не знаю (нужен ваш совет)</label>
+          <li class="form__item form__item--radio">
+            <input id="help" name="option" class="form__input form__input--radio" type="radio">
+            <label class="form__label form__label--radio" for="help">не знаю (нужен ваш совет)</label>
           </li>
         </ul>
       </fieldset>
@@ -89,38 +89,38 @@
           <input class="form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
         </p>
       </fieldset>
-      <div class="comment">
-        <h2 class="comment__title">
+      <fieldset class="form__group form__group--comment">
+        <legend class="form__legend">
           Комментарий
-        </h2>
+        </legend>
         <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-      </div>
+      </fieldset>
       <fieldset class="form__group">
         <legend class="form__legend">
           Дополнительно
         </legend>
-        <ul class="form__list--checkbox">
-          <li class="form__item--checkbox">
-            <input class="visually-hidden form__input--checkbox" type="checkbox" id="sugar" name="sugar" checked>
-            <label class="form__label--checkbox" for="sugar">
+        <ul class="form__list form__list--checkbox">
+          <li class="form__item form__item--checkbox">
+            <input class="form__input form__input--checkbox" type="checkbox" id="sugar" name="sugar" checked>
+            <label class="form__label form__label--checkbox" for="sugar">
               сахарозаменитель
             </label>
           </li>
-          <li class="form__item--checkbox">
-            <input class="visually-hidden form__input--checkbox" type="checkbox" name="water" id="water">
-            <label class="form__label--checkbox" for="water">
+          <li class="form__item form__item--checkbox">
+            <input class="form__input form__input--checkbox" type="checkbox" name="water" id="water">
+            <label class="form__label form__label--checkbox" for="water">
               питьевая вода
             </label>
           </li>
-          <li class="form__item--checkbox">
-            <input class="visually-hidden form__input--checkbox" type="checkbox" name="milk" id="milk">
-            <label class="form__label--checkbox" for="milk">
+          <li class="form__item form__item--checkbox">
+            <input class="form__input form__input--checkbox" type="checkbox" name="milk" id="milk">
+            <label class="form__label form__label--checkbox" for="milk">
               молоко
             </label>
           </li>
-          <li class="form__item">
-            <input class="visually-hidden form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
-            <label class="form__label--checkbox" for="vitamins">
+          <li class="form__item form__item--checkbox">
+            <input class="form__input form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <label class="form__label form__label--checkbox" for="vitamins">
               витамины
             </label>
           </li>
