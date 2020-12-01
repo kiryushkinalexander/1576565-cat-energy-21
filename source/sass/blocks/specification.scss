@@ -1,0 +1,33 @@
+.specification__title {
+  font-family: $font-custom;
+  color: $black;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 38px;
+}
+
+.specification__description {
+  font-family: $font-default;
+  color: $black;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.specification__item {
+  margin-bottom: 26px;
+  padding: 0;
+}
+
+.specification__list {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specification__list li:last-child {
+  margin: 0;
+}

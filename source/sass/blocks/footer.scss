@@ -1,0 +1,43 @@
+.map {
+  background-image: url("../img/map.jpg");
+  width: auto;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contacts__adress {
+  font-family: $font-default;
+  color: $black;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__slogan {
+  font-family: $font-custom;
+  text-transform: uppercase;
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+}
+
+.footer__title {
+  font-family: $font-default;
+  color: $special_dark-grey;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.social {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}

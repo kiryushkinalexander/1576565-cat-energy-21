@@ -1,3 +1,31 @@
 .promo {
   background-color: $special-grey;
+  margin-bottom: 22px;
+}
+
+.promo__header {
+  text-align: center;
+  margin: 0;
+  padding: 27px 35px 29px 36px;
+}
+
+.promo__slogan {
+  font-family: $font-custom;
+  font-size: 36px;
+  line-height: 36px;
+  color: $white;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+}
+
+
+.promo__intro {
+  font-family: $font-custom;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
 }
