@@ -1,0 +1,142 @@
+.form__title {
+  font-family: $font-custom;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+  margin: 0;
+  margin-bottom: 37px;
+  font-weight: normal;
+}
+
+.form__slogan {
+  font-family: $font-custom;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0;
+  margin-bottom: 39px;
+  font-weight: normal;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  padding-bottom: 24px;
+
+  p {
+    margin: 0;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__label {
+  font-family: $font-custom;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special_dark-grey;
+  margin-right: 13px;
+
+  &--radio {
+    font-family: $font-custom;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $special_dark-grey-2;
+    margin: 0;
+  }
+
+  &--checkbox {
+    color: $black;
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+.form__input {
+  font-family: $font-custom;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 40px 14px 15px;
+  border: 1px solid $inner-border;
+  color: $special_dark-grey;
+
+  &::placeholder {
+    color: $special_dark-grey;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &--radio {
+    margin-right: 16px;
+  }
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__item {
+  margin-bottom: 10px;
+
+  &--radio {
+    margin-bottom: 25px;
+  }
+
+  &--checkbox {
+    margin-bottom: 27px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__legend {
+  font-family: $font-custom;
+  color: $black;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.form__textarea {
+  font-family: $font-custom;
+  color: $special_dark-grey;
+  border: 1px solid $inner-border;
+  resize: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0;
+
+  &::placeholder {
+    color: $special_dark-grey;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.form__info {
+  color: $black;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding: 21px 0 32px 0;
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+}

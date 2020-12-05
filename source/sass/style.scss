@@ -1,3 +1,4 @@
+@import "global/normalize";
 @import "global/fonts";
 @import "global/global";
 @import "global/variables";
@@ -5,7 +6,8 @@
 @import "blocks/visually-hidden";
 @import "blocks/main-nav";
 @import "blocks/promo";
-@import "blocks/button";
+@import "blocks/primary-button";
 @import "blocks/programm";
 @import "blocks/specification";
 @import "blocks/footer";
+@import "blocks/form";
