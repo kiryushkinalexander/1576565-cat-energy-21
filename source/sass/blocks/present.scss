@@ -1,0 +1,16 @@
+.present {
+  background-image: url(../img/present.jpg);
+  width: 289px;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.present__title {
+  padding: 186px 61px 43px 58px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  margin: 0;
+}

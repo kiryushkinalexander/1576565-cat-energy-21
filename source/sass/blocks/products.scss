@@ -1,0 +1,20 @@
+.products__list {
+  margin: 0;
+  padding: 0;
+}
+
+.products__button {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 109px;
+
+  &--show-more {
+    font-size: 16px;
+    line-height: 20px;
+    color: $special_dark-grey;
+    background-color: $basic-grey;
+    padding: 10px 94px;
+  }
+}
+

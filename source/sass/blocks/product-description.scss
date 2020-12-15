@@ -1,0 +1,32 @@
+.product-description {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.product-description__item {
+  color: $special_dark-grey;
+  font-size: 12px;
+  line-height: 16px;
+
+  dd {
+    margin: 0;
+  }
+}
+
+.product-description__title {
+  font-family: $font-custom;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_black;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.product-description__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $special_dark-grey;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
