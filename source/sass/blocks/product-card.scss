@@ -1,0 +1,21 @@
+.product-card {
+  padding: 19px 20px 25px 20px;
+}
+
+.product-card__title {
+  font-family: $font-custom;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_dark-grey-2;
+  margin: 0;
+  margin-bottom: 14px;
+
+  a {
+    font-family: $font-custom;
+    font-size: 16px;
+    line-height: 20px;
+    color: $special_dark-grey-2;
+  }
+}
+
+
