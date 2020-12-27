@@ -6,6 +6,15 @@
   margin: 0;
   padding: 0;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0;
+  margin-bottom: 32px;
+  }
 }
 
 .specification__description {
@@ -15,6 +24,13 @@
   line-height: 18px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  }
 }
 
 .specification__item {
@@ -26,8 +42,24 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      grid-gap: 18px 137px;
+      padding-bottom: 6px;
+    }
 }
 
 .specification__list li:last-child {
   margin: 0;
+}
+
+.specification__wrapper {
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 105px 47px 30px;
+  }
 }

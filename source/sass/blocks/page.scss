@@ -14,3 +14,18 @@
   color: $black;
   margin: 0;
 }
+
+.page-header {
+  @media (min-width: $tablet-width) {
+     display: flex;
+     flex-direction: row;
+     padding: 42px 30px;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: $tablet-width) {
+    margin-right: 94px;
+  }
+}
+

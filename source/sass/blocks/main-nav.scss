@@ -1,11 +1,22 @@
 .main-nav {
   margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .main-nav__list {
   padding: 0;
   margin: 0;
   text-decoration: none;
+
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .main-nav__link {
@@ -17,13 +28,34 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .main-nav__item {
   text-align: center;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .main-nav__list li:last-child {
   margin: 0;
+}
+
+.main-nav_toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
