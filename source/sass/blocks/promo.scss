@@ -1,20 +1,25 @@
 .promo {
-  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 200px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 526px;
+  }
 }
 
-.promo__header {
+.promo__wrapper {
   text-align: center;
-  margin: 0;
-  padding: 27px 35px 29px 36px;
   background-image: url(../img/promo-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 27px;
+  height: 302px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
-    padding: 0;
     padding-left: 87px;
+    padding-top: 22px;
     padding-right: 207px;
   }
 }
@@ -25,21 +30,25 @@
   line-height: 36px;
   color: $white;
   margin: 0;
-  padding: 0;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    font-style: normal;
-    font-weight: normal;
     font-size: 60px;
     line-height: 60px;
     color: $black;
-    padding: 0;
-    padding-bottom: 41px;
     text-align: left;
+    margin-bottom: 41px;
   }
 }
 
+.promo__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-right: 245px;
+  }
+}
 
 .promo__intro {
   font-family: $font-custom;
@@ -48,11 +57,9 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
-  padding: 0;
+  margin-bottom: 302px;
 
   @media (min-width: $tablet-width) {
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 20px;
     color: $black;
@@ -61,10 +68,24 @@
   }
 }
 
+.promo__image {
+  position: absolute;
+  top: 167px;
+  left: 50%;
+  z-index: 1;
 
-.promo__wrapper {
+  width: 280px;
+  height: 270px;
+
+  background-image: url("../img/can-mobile.png");
+  background-repeat: no-repeat;
+  transform: translate(-50%, 0);
+
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    padding: 0 30px;
+    top: 228px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+    background-image: url("../img/can-tablet.png");
   }
 }
