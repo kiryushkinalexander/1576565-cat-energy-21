@@ -1,26 +1,47 @@
 .promo {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 82px;
   }
 }
 
 .promo__wrapper {
   text-align: center;
-  background-image: url(../img/promo-image.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 27px;
-  height: 302px;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: url(../img/promo-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: 50%;
+    transform: translateX(50%);
+    height: 302px;
+  }
 
   @media (min-width: $tablet-width) {
-    background-image: none;
     padding-left: 87px;
     padding-top: 22px;
     padding-right: 207px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 190px;
+    padding-right: 836px;
+    padding-top: 124px;
   }
 }
 
@@ -31,6 +52,7 @@
   color: $white;
   margin: 0;
   margin-bottom: 25px;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -38,7 +60,9 @@
     color: $black;
     text-align: left;
     margin-bottom: 41px;
+    padding: 0;
   }
+
 }
 
 .promo__button {
@@ -47,6 +71,11 @@
   @media (min-width: $tablet-width) {
     width: auto;
     margin-right: 245px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 244px;
   }
 }
 
@@ -57,7 +86,7 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
-  margin-bottom: 302px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -66,26 +95,28 @@
     text-align: left;
     margin-bottom: 49px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .promo__image {
-  position: absolute;
-  top: 167px;
-  left: 50%;
-  z-index: 1;
-
-  width: 280px;
-  height: 270px;
-
-  background-image: url("../img/can-mobile.png");
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
 
   @media (min-width: $tablet-width) {
-    top: 228px;
+    position: absolute;
     z-index: -1;
     width: 709px;
     height: 609px;
     background-image: url("../img/can-tablet.png");
+
+    img {
+      display: none;
+    }
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+  }
+
 }

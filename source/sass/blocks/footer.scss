@@ -1,3 +1,9 @@
+.footer {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .footer__info {
   background-color: $basic-grey;
   padding-top: 39px;
@@ -7,9 +13,14 @@
     padding-top: 55px;
     padding-bottom: 61px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
 }
 
-.footer__info--wrapper {
+.footer__wrapper {
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -29,8 +40,12 @@
 
 .footer__logo {
   display: block;
-  margin: 0 auto;
-  padding-bottom: 32px;
+  padding: 0 0 32px;
+
+  &-image {
+    display: block;
+    margin: 0 auto;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -41,7 +56,6 @@
   margin-left: auto;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     margin-left: 22px;
   }
 }

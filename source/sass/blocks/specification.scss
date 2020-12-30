@@ -10,7 +10,6 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 0;
     margin-bottom: 32px;
   }
 }
@@ -40,9 +39,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
     grid-gap: 18px 137px;
     padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
   }
 }
 

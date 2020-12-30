@@ -10,6 +10,19 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 295px;
   }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+    position: absolute;
+    background-color: $white;
+    left: 7%;
+    top: 15%;
+    padding: 62px 89px 51px 76px;
+    width: 570px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 87px;
+  }
 }
 
 .contacts__adress {
