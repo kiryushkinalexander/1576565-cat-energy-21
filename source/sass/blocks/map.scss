@@ -1,0 +1,16 @@
+.map {
+  background-image: url("../img/map.jpg");
+  width: auto;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
+}

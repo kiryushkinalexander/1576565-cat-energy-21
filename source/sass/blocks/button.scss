@@ -1,11 +1,14 @@
-.primary-button {
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: $font-custom;
   color: $white;
+  padding: 11px 35px;
   font-size: 14px;
   line-height: 18px;
-  width: 280px;
-  height: 40px;
   text-transform: uppercase;
+  text-align: center;
   background-color: $basic-green;
   border: none;
   cursor: pointer;

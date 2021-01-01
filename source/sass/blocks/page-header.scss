@@ -1,0 +1,12 @@
+.page-header {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    align-self: center;
+  }
+}

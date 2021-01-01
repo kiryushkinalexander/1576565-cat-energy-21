@@ -2,10 +2,16 @@
   font-family: $font-custom;
   color: $black;
   font-size: 36px;
+  font-weight: normal;
   line-height: 40px;
   margin: 0;
-  padding: 0;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .specification__description {
@@ -14,18 +20,34 @@
   font-size: 14px;
   line-height: 18px;
   margin: 0;
-  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .specification__item {
   margin-bottom: 26px;
-  padding: 0;
 }
 
 .specification__list {
   text-decoration: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 18px 137px;
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+  }
 }
 
 .specification__list li:last-child {

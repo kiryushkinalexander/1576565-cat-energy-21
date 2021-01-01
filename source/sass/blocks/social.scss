@@ -1,0 +1,30 @@
+.social {
+  margin: 0;
+  padding: 0;
+  padding: 20px 77px 21px 73px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 129px;
+    padding: 0;
+  }
+}
+
+.social__item {
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 29px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
