@@ -17,7 +17,7 @@
   &::before {
     position: absolute;
     z-index: -1;
-    content: url(../img/promo-image.jpg);
+    content: url("../img/promo-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,7 +62,6 @@
     margin-bottom: 41px;
     padding: 0;
   }
-
 }
 
 .promo__button {
@@ -102,7 +101,6 @@
 }
 
 .promo__image {
-
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -1;
@@ -126,5 +124,4 @@
     width: 552px;
     height: 499px;
   }
-
 }

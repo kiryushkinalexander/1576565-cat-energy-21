@@ -21,7 +21,6 @@
 }
 
 .footer__wrapper {
-
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -63,6 +62,4 @@
 .footer__copyright {
   display: flex;
   align-items: center;
-
-  @media (min-width: $tablet-width) {}
 }
