@@ -1,9 +1,10 @@
 .social {
   margin: 0;
   padding: 0;
-  padding: 20px 77px 21px 73px;
+  padding: 20px 0px 21px 73px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   @media (min-width: $tablet-width) {
