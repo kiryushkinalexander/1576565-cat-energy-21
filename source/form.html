@@ -36,6 +36,7 @@
 
   <main class="page__main">
     <form class="form" action="https://echo.htmlacademy.ru" method="GET">
+    <div class="wrapper">
       <h1 class="form__title">
         Подбор программы
       </h1>
@@ -43,21 +44,23 @@
         Заполните анкету, и мы подберем <br>
         программу питания для вашего кота
       </h2>
-      <fieldset class="form__group">
-        <div class="form__wrapper wrapper">
-        <p>
+    </div>
+    <div class="form__wrapper-desktop wrapper">
+      <fieldset class="form__group form__group--contacts">
+        <div class="form__wrapper wrapper form__wrapper--contacts">
+        <p class="form__field">
           <label class="form__label" for="name">
             имя: <sup>*</sup>
           </label>
           <input class="form__input" id="name" type="text" placeholder="барсик">
         </p>
-        <p>
+        <p class="form__field">
           <label class="form__label" for="weight">
             вес(кг): <sup>*</sup>
           </label>
           <input class="form__input" id="weight" type="text" placeholder="7">
         </p>
-        <p>
+        <p class="form__field">
           <label class="form__label" for="age">
             возраст(лет):
           </label>
@@ -69,33 +72,36 @@
         <div class="form__wrapper wrapper form__wrapper--radio">
         <ul class="form__list">
           <li class="form__item form__item--radio">
-            <input id="slim" name="option" class="form__input form__input--radio" type="radio" checked>
+            <input id="slim" name="option" class="form__input form__input--radio visually-hidden" type="radio" checked>
             <label class="form__label form__label--radio" for="slim">похудение</label>
           </li>
           <li class="form__item form__item--radio">
-            <input id="gain" name="option" class="form__input form__input--radio" type="radio">
+            <input id="gain" name="option" class="form__input form__input--radio visually-hidden" type="radio">
             <label class="form__label form__label--radio" for="gain">набор массы</label>
           </li>
           <li class="form__item form__item--radio">
-            <input id="help" name="option" class="form__input form__input--radio" type="radio">
+            <input id="help" name="option" class="form__input form__input--radio visually-hidden" type="radio">
             <label class="form__label form__label--radio" for="help">не знаю (нужен ваш совет)</label>
           </li>
         </ul>
       </div>
       </fieldset>
-      <fieldset class="form__group form__group--contacts">
+    </div>
+      <fieldset class="form__group">
         <legend class="form__legend form__legend--contacts">
-          Контактные данные
-          (владельца кота)
+          <span class="form__legend-text wrapper">
+            Контактные данные <br>
+            (владельца кота)
+          </span>
         </legend>
-        <div class="form__wrapper wrapper">
-        <p>
+        <div class="form__wrapper form__wrapper-desktop  wrapper">
+        <p class="form__field form__field--desktop">
           <label class="form__label" for="email">
             e-mail: <sup>*</sup>
           </label>
           <input class="form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
         </p>
-        <p>
+        <p class="form__field form__field--desktop">
           <label class="form__label" for="phone">
             телефон: <sup>*</sup>
           </label>
@@ -105,38 +111,44 @@
       </fieldset>
       <fieldset class="form__group form__group--comment">
         <legend class="form__legend form__legend--comment">
-          Комментарий
+          <span class="form__legend-text wrapper">
+            Комментарий
+          </span>
         </legend>
         <div class="form__wrapper wrapper">
-        <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label>
+            <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
       </div>
       </fieldset>
       <fieldset class="form__group form__group--checkbox">
         <legend class="form__legend form__legend--checkbox">
+          <span class="form__legend-text wrapper">
           Дополнительно
+        </span>
         </legend>
         <div class="form__wrapper wrapper">
         <ul class="form__list form__list--checkbox">
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" id="sugar" name="sugar" checked>
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
             <label class="form__label form__label--checkbox" for="sugar">
               сахарозаменитель
             </label>
           </li>
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="water" id="water">
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="water" id="water">
             <label class="form__label form__label--checkbox" for="water">
               питьевая вода
             </label>
           </li>
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="milk" id="milk">
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="milk" id="milk">
             <label class="form__label form__label--checkbox" for="milk">
               молоко
             </label>
           </li>
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
             <label class="form__label form__label--checkbox" for="vitamins">
               витамины
             </label>
@@ -144,8 +156,8 @@
         </ul>
       </div>
       </fieldset>
-      <div class="form__wrapper wrapper form__wrapper--inner">
-      <a class="button form__button" type="submit"> отправить заявку</a>
+      <div class="form__wrapper wrapper form__wrapper--info">
+      <button class="button form__button" type="submit"> отправить заявку</button>
       <p class="form__info">
         <sup>*</sup> — Обязательные поля
       </p>
