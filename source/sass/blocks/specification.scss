@@ -36,6 +36,8 @@
   margin: 0;
   padding: 0;
 
+  @include list-style;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;

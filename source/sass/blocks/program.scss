@@ -61,14 +61,14 @@
 
   @media (min-width: $desktop-width) {
     padding: 41px 51px 55px 52px;
-    margin-right: 80px;
     width: 570px;
+    margin: 0;
+
 
     &:last-child {
       margin-right: 0;
     }
   }
-
 }
 
 .program__description {
@@ -92,6 +92,8 @@
 
 .program__wrapper {
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
