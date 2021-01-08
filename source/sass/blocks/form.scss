@@ -48,6 +48,11 @@
   }
 
   &--radio {
+    padding-top: 22px;
+  }
+
+  &--radio,
+  &--contacts {
     border-bottom: 1px solid $border;
     padding-top: 22px;
 
@@ -56,25 +61,15 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 596px;
+      width: calc(50% - 40px);
       padding: 0;
     }
   }
+}
 
-  &--contacts {
-    border-bottom: 1px solid $border;
-
-    @media (min-width: $tablet-width) {
-      border: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: flex;
-      flex-direction: column;
-      width: 596px;
-      padding: 0;
-      margin-right: 80px;
-    }
+.form__inner {
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
   }
 }
 
@@ -152,6 +147,10 @@
 
   &--checkbox {
     margin-bottom: 27px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 
   &:last-child {
@@ -230,7 +229,7 @@
 }
 
 .form__wrapper {
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding: 0 67px;
   }
 
@@ -242,17 +241,12 @@
     }
   }
 
-  &--contacts {
-    @media (min-width: $desktop-width) {
-      width: 569px;
-      padding: 0;
-    }
-  }
-
+  &--contacts,
   &--radio {
     @media (min-width: $desktop-width) {
-      width: 569px;
+      width: 100%;
       padding: 0;
+      margin: 0;
     }
   }
 }
@@ -269,25 +263,16 @@
 
   &:last-child {
     margin-bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
   }
 
 
   &--desktop {
     @media (min-width: $desktop-width) {
-      width: 569px;
-      margin-right: 80px;
-      margin-bottom: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      width: calc(50% - 40px);
     }
-  }
-}
-
-.form__wrapper-desktop {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    padding: 0 110px;
   }
 }
