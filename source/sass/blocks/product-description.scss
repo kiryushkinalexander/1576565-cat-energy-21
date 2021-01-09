@@ -1,12 +1,14 @@
 .product-description {
   margin: 0;
-  margin-bottom: 22px;
 }
 
 .product-description__item {
   color: $special_dark-grey;
   font-size: 12px;
   line-height: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   dd {
     margin: 0;

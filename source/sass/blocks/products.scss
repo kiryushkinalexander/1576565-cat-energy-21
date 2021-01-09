@@ -1,6 +1,22 @@
+.products {
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+  }
+}
+
 .products__list {
   margin: 0;
   padding: 0;
+
+  @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 59px 60px;
+  }
 }
 
 .products__button {

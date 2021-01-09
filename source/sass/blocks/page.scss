@@ -13,4 +13,9 @@
   line-height: 36px;
   color: $black;
   margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 83px;
+  }
 }

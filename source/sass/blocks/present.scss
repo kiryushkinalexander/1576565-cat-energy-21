@@ -5,6 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 200px;
+  }
 }
 
 .present__title {
@@ -13,4 +18,8 @@
   line-height: 20px;
   color: $white;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 71px 124px 69px 423px;
+  }
 }
