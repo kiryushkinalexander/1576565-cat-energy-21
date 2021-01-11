@@ -1,19 +1,40 @@
+.products {
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+  }
+}
+
 .products__list {
   margin: 0;
   padding: 0;
+
+  @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 62px 80px;
+  }
 }
 
 .products__button {
+  width: 100%;
   display: inline-block;
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 109px;
 
   &--show-more {
     font-size: 16px;
     line-height: 20px;
     color: $special_dark-grey;
     background-color: $basic-grey;
-    padding: 10px 94px;
+    width: 100%;
   }
 }
