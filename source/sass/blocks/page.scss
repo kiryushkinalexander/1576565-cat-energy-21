@@ -7,16 +7,20 @@
   color: $special_dark-grey;
 }
 
-.page__main--title {
+.page__title {
   font-family: $font-custom;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
   color: $black;
   margin: 0;
+  margin-top: 27px;
   margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 65px;
     margin-bottom: 83px;
   }
 }

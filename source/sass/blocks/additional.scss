@@ -27,22 +27,30 @@
 .additional__list {
   padding: 0;
   margin: 0;
+  padding-bottom: 39px;
 
   @include list-style;
 }
 
 .additional__item {
   padding: 13px 0 19px;
+  border-top: 1px solid $special-grey;
 
   @media (min-width: $tablet-width) {
     padding: 26px 38px;
     display: flex;
     flex-wrap: wrap;
+    border-left: 1px solid $special-grey;
+    border-right: 1px solid $special-grey;
   }
 
   @media (min-width: $desktop-width) {
     padding: 15px 17px;
     align-items: center;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $special-grey;
   }
 }
 
@@ -106,6 +114,7 @@
 .additional__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: auto 245px;
+    column-gap: 80px;
   }
 }

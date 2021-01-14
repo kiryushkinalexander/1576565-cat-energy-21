@@ -19,4 +19,25 @@
     justify-content: space-between;
     align-self: flex-start;
   }
+
+  &--catalog {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: $border;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
