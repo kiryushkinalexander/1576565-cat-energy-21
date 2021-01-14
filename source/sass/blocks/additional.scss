@@ -47,6 +47,8 @@
   @media (min-width: $desktop-width) {
     padding: 15px 17px;
     align-items: center;
+    border-left: none;
+    border-right: none;
   }
 
   &:last-child {
