@@ -40,6 +40,7 @@
 .footer__logo {
   display: block;
   padding: 0 0 32px;
+  border-bottom: 1px solid $border;
 
   &-image {
     display: block;
@@ -48,6 +49,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-bottom: none;
   }
 }
 
@@ -62,4 +64,9 @@
 .footer__copyright {
   display: flex;
   align-items: center;
+  padding-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }

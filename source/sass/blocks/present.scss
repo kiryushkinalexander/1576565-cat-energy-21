@@ -1,4 +1,5 @@
 .present {
+  position: relative;
   height: 280px;
   background-image: url("../img/present.jpg");
   background-repeat: no-repeat;
@@ -32,6 +33,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 183px 43px 42px 41px;
+    padding: 184px 43px 42px 41px;
+  }
+}
+
+.present__image {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+
+  @media (min-width: $tablet-width) {
+    top: 30%;
+    left: 10%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20%;
+    left: 33%;
   }
 }

@@ -5,11 +5,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 40px;
+  padding-left: 74px;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid $border;
 
   @media (min-width: $tablet-width) {
     width: 129px;
     padding: 0;
+    border-bottom: none;
   }
 }
 

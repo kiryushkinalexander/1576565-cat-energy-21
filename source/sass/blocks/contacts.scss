@@ -3,6 +3,7 @@
   padding-bottom: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
     padding: 62px 72px 51px 71px;
