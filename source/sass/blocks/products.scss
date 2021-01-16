@@ -37,4 +37,12 @@
     background-color: $basic-grey;
     width: 100%;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 79%;
+    display: inline-flex;
+    align-self: center;
+    margin-bottom: 40px;
+  }
+
 }
