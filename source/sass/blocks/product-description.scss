@@ -2,7 +2,23 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 87px;
+    margin-bottom: 33px;
+  }
+
+  &--show-more {
+    position: relative;
+
+
+    &::before {
+      content: url(../img/plus.svg);
+      position: absolute;
+      top: 40%;
+      left: 35%;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 237px;
+    }
   }
 }
 
@@ -37,6 +53,7 @@
   color: $special_black;
   margin: 0;
   margin-bottom: 8px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     text-align: center;

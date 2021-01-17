@@ -36,7 +36,7 @@
 
   <main class="page__main">
     <form class="form" action="https://echo.htmlacademy.ru" method="GET">
-    <div class="wrapper">
+    <div class="form__wrapper wrapper">
       <h1 class="form__title">
         Подбор программы
       </h1>
@@ -45,7 +45,7 @@
         программу питания для вашего кота
       </h2>
     </div>
-    <div class="wrapper--flex wrapper form__inner">
+    <div class="wrapper--flex form__wrapper wrapper form__inner">
       <fieldset class="form__group form__group--contacts">
         <div class="form__wrapper wrapper form__wrapper--contacts">
         <p class="form__field">
@@ -89,29 +89,29 @@
     </div>
       <fieldset class="form__group">
         <legend class="form__legend form__legend--contacts">
-          <span class="form__legend-text wrapper">
+          <span class="form__legend-text form__wrapper wrapper">
             Контактные данные <br>
             (владельца кота)
           </span>
         </legend>
         <div class="form__wrapper wrapper wrapper--flex">
         <p class="form__field form__field--desktop">
-          <label class="form__label" for="email">
+          <label class="form__label form__label--email" for="email">
             e-mail: <sup>*</sup>
           </label>
-          <input class="form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
+          <input class="form__input form__input--email" id="email" type="email" placeholder="kuklachev@gmail.com">
         </p>
         <p class="form__field form__field--desktop">
-          <label class="form__label" for="phone">
+          <label class="form__label form__label--phone" for="phone">
             телефон: <sup>*</sup>
           </label>
-          <input class="form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
+          <input class="form__input form__input--phone" id="phone" type="tel" placeholder="8 (960) 900-60-90">
         </p>
       </div>
       </fieldset>
       <fieldset class="form__group form__group--comment">
         <legend class="form__legend form__legend--comment">
-          <span class="form__legend-text wrapper">
+          <span class="form__legend-text form__wrapper wrapper">
             Комментарий
           </span>
         </legend>
@@ -123,7 +123,7 @@
       </fieldset>
       <fieldset class="form__group form__group--checkbox">
         <legend class="form__legend form__legend--checkbox">
-          <span class="form__legend-text wrapper">
+          <span class="form__legend-text form__wrapper wrapper">
           Дополнительно
         </span>
         </legend>

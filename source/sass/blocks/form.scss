@@ -43,22 +43,9 @@
   border: none;
   padding-bottom: 24px;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 65px;
-  }
-
-  &--radio {
-    padding-top: 22px;
-  }
-
   &--radio,
   &--contacts {
-    border-bottom: 1px solid $border;
     padding-top: 22px;
-
-    @media (min-width: $tablet-width) {
-      border: none;
-    }
 
     @media (min-width: $desktop-width) {
       width: calc(50% - 40px);
@@ -81,15 +68,25 @@
   color: $special_dark-grey;
   margin-right: 13px;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--radio {
     color: $special_dark-grey-2;
     margin: 0;
+    margin-left: 46px;
   }
 
   &--checkbox {
     color: $black;
-    margin-left: 16px;
+    margin-left: 46px;
     margin-right: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 60px;
+    }
   }
 }
 
@@ -107,6 +104,14 @@
     color: $special_dark-grey;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  &:hover {
+    border: 1px solid $special-grey;
+  }
+
+  &:active {
+    border: 1px solid $black;
   }
 }
 
@@ -127,8 +132,10 @@
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 32px 124px;
       border: none;
       padding: 0;
+      padding-bottom: 59px;
     }
 
     @media (min-width: $desktop-width) {
@@ -139,6 +146,7 @@
 }
 
 .form__item {
+  position: relative;
   margin-bottom: 10px;
 
   &--radio {
@@ -192,8 +200,13 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  padding: 9px 15px 0;
+  padding: 9px 11px 0;
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     color: $special_dark-grey;
@@ -275,6 +288,123 @@
   &--desktop {
     @media (min-width: $desktop-width) {
       width: calc(50% - 40px);
+    }
+  }
+}
+
+.form__item--checkbox,
+.form__item--radio {
+  position: relative;
+}
+
+.form__input--checkbox+.form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/checkbox-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__input--checkbox:checked+.form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/checkbox-on.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__input--radio+.form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/radio-button-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__input--radio:checked+.form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/radio-button-on.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__label--email {
+  &::before {
+    position: absolute;
+    content: url(../img/icon_email.svg);
+    left: 83%
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      left: 86%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 45%;
+    }
+  }
+}
+
+.form__label--phone {
+  &::before {
+    position: absolute;
+    content: url(../img/icon_phone.svg);
+    left: 83%
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      left: 86%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 90%;
     }
   }
 }
