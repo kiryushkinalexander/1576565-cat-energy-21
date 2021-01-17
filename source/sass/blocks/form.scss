@@ -297,14 +297,14 @@
   position: relative;
 }
 
-.form__input--checkbox+.form__label--checkbox::after {
+.form__input--checkbox + .form__label--checkbox::after {
   content: "";
   position: absolute;
   top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url("../img/checkbox-off.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,14 +315,14 @@
   }
 }
 
-.form__input--checkbox:checked+.form__label--checkbox::after {
+.form__input--checkbox:checked + .form__label--checkbox::after {
   content: "";
   position: absolute;
   top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url("../img/checkbox-on.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -333,14 +333,14 @@
   }
 }
 
-.form__input--radio+.form__label--radio::after {
+.form__input--radio + .form__label--radio::after {
   content: "";
   position: absolute;
   top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../img/radio-button-off.svg);
+  background-image: url("../img/radio-button-off.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,14 +351,14 @@
   }
 }
 
-.form__input--radio:checked+.form__label--radio::after {
+.form__input--radio:checked + .form__label--radio::after {
   content: "";
   position: absolute;
   top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../img/radio-button-on.svg);
+  background-image: url("../img/radio-button-on.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -372,8 +372,8 @@
 .form__label--email {
   &::before {
     position: absolute;
-    content: url(../img/icon_email.svg);
-    left: 83%
+    content: url("../img/icon_email.svg");
+    left: 83%;
   }
 
   @media (min-width: $tablet-width) {
@@ -392,8 +392,8 @@
 .form__label--phone {
   &::before {
     position: absolute;
-    content: url(../img/icon_phone.svg);
-    left: 83%
+    content: url("../img/icon_phone.svg");
+    left: 83%;
   }
 
   @media (min-width: $tablet-width) {
