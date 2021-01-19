@@ -23,26 +23,3 @@
     gap: 62px 80px;
   }
 }
-
-.products__button {
-  width: 100%;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 20px;
-
-  &--show-more {
-    font-size: 16px;
-    line-height: 20px;
-    color: $special_dark-grey;
-    background-color: $basic-grey;
-    width: 100%;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 79%;
-    display: inline-flex;
-    align-self: center;
-    margin-bottom: 40px;
-  }
-
-}

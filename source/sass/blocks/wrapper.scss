@@ -14,10 +14,41 @@
   }
 
   &--flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-self: flex-start;
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-self: flex-start;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 71%;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 91%;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+
+    &::after,
+    &::before {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 
   &--catalog {
