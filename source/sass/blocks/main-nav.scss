@@ -1,11 +1,13 @@
 .main-nav {
   position: relative;
-  padding-bottom: 18px;
+display: none;
 
   @media (min-width: $tablet-width) {
-    padding-top: 42px;
-    padding-bottom: 42px;
-    display: flex;
+    display: block;
+  }
+
+  &--nojs {
+    display: block;
   }
 }
 
@@ -84,7 +86,7 @@
   padding: 24px 0 22px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    padding: 0;
     margin-right: 35px;
 
     &:last-child {
@@ -113,61 +115,44 @@
 }
 
 .main-nav__toggle {
+
+  &--nojs  {
+    display: none;
+  }
+
   position: absolute;
-  top: 0;
-  right: -20px;
+  top: 25px;
+  right: 20px;
   z-index: 2;
-  display: block;
-  width: 19px;
-  background-color: transparent;
-  height: 19px;
-  cursor: pointer;
+  width: 25px;
+  height: 18px;
   outline: none;
   border: none;
-  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/burger_menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  width: 24px;
-  height: 1.5px;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
-}
-
-.main-nav--opened .main-nav__toggle {
-  top: 0;
-  right: auto;
-  left: 0;
-
-  &::before,
-  &::after {
-    content: "";
+  &--opened {
     position: absolute;
-    top: -20px;
-    left: 261px;
-    width: 24px;
-    height: 1.5px;
-    background-color: $black;
-  }
+    top: 23px;
+    right: 20px;
+    z-index: 2;
+    width: 25px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/close_menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }

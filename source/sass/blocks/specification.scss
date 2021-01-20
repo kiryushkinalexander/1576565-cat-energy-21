@@ -1,4 +1,5 @@
 .specification {
+  position: relative;
   padding-bottom: 42px;
 }
 
@@ -14,7 +15,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
 }
 
@@ -37,12 +38,51 @@
   }
 }
 
+.specification__list {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: counter;
+
+  @include list-style;
+
+  & li:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 18px 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    gap: 77px;
+  }
+}
+
 .specification__item {
   position: relative;
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+
+    &::after {
+      font-family: $font-custom;
+      counter-increment: counter;
+      content: counter(counter);
+      position: absolute;
+      bottom: -12px;
+      right: 0;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      z-index: -1;
+    }
   }
 
   &--leaf::before {
@@ -115,41 +155,5 @@
       height: 80px;
       background-image: url("../img/icon_time-big.svg");
     }
-  }
-}
-
-.specification__item-image {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-  }
-}
-
-.specification__list {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-
-  @include list-style;
-
-  & li:last-child {
-    margin: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 18px 137px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0;
   }
 }

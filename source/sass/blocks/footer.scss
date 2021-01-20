@@ -74,11 +74,12 @@
 .footer__contacts {
   padding-top: 28px;
   padding-bottom: 28px;
-  background-color: $basic-grey;
+
 
   @media (min-width: $tablet-width) {
     padding-top: 65px;
     padding-bottom: 62px;
+    background-color: $basic-grey;
   }
 
   @media (min-width: $desktop-width) {

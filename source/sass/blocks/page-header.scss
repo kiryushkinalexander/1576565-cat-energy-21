@@ -1,12 +1,19 @@
 .page-header {
+  padding-top: 12px;
+
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
   }
 }
 
 .page-header__logo {
+  display: block;
+  padding-bottom: 17px;
+
   @media (min-width: $tablet-width) {
     margin-right: auto;
     align-self: center;
+    padding: 0;
   }
 }

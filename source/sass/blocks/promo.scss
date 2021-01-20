@@ -2,17 +2,6 @@
   position: relative;
   padding-bottom: 22px;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 526px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 267px;
-  }
-}
-
-.promo__wrapper {
-  text-align: center;
 
   &::before {
     position: absolute;
@@ -24,21 +13,39 @@
     right: 50%;
     transform: translateX(50%);
     height: 302px;
+
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: url("../img/promo_image-big.svg");
+      height: 694px;
+      right: 25%;
+      top: -54px;
+    }
   }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 267px;
+  }
+}
+
+.promo__wrapper {
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding-left: 87px;
     padding-top: 22px;
     padding-right: 207px;
-
-    &::before {
-      content: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: column;
     padding-left: 190px;
     padding-right: 836px;
     padding-top: 124px;
@@ -53,6 +60,7 @@
   margin: 0;
   margin-bottom: 25px;
   padding-top: 27px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -86,6 +94,7 @@
   line-height: 14px;
   margin: 0;
   margin-bottom: 29px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -101,6 +110,7 @@
 }
 
 .promo__image {
+
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -1;
