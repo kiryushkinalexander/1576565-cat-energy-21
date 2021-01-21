@@ -1,20 +1,13 @@
-const mainNav = document.querySelector('.main-nav');
-const toggleNav = document.querySelector('.main-nav__toggle');
+const header = document.querySelector('.page-header');
+const toggleNav = document.querySelector('.page-header__toggle');
 
-mainNav.classList.remove('main-nav--nojs');
-toggleNav.classList.remove('main-nav__toggle--nojs');
+header.classList.remove('page-header--nojs');
 
 
 toggleNav.addEventListener ('click', () => {
-  if (toggleNav.classList.contains('main-nav__toggle') || mainNav.classList.contains('main-nav')) {
-    toggleNav.classList.remove('main-nav__toggle');
-    toggleNav.classList.add('main-nav__toggle--opened');
-    mainNav.classList.remove('main-nav');
-    mainNav.classList.add('main-nav--nojs');
+  if (header.classList.contains('page-header--opened')) {
+    header.classList.remove('page-header--opened');
   } else {
-    toggleNav.classList.add('main-nav__toggle');
-    toggleNav.classList.remove('main-nav__toggle--opened');
-    mainNav.classList.add('main-nav');
-    mainNav.classList.remove('main-nav--nojs');
+    header.classList.add('page-header--opened');
   }
 });

@@ -1,17 +1,12 @@
 .main-nav {
   position: relative;
-display: none;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
-  }
-
-  &--nojs {
-    display: block;
+    margin-left: auto;
   }
 }
-
-
 
 .main-nav__list {
   padding: 0;
@@ -27,21 +22,6 @@ display: none;
 
   @media (min-width: $desktop-width) {
     width: auto;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
-    height: 1px;
-    background-color: $border2;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
   }
 }
 
@@ -63,25 +43,12 @@ display: none;
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 138px;
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
-    height: 1px;
-    background-color: $border2;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+    color: $white;
   }
 }
 
 .main-nav__item {
+  position: relative;
   text-align: center;
   padding: 24px 0 22px;
 
@@ -97,59 +64,12 @@ display: none;
   &::before {
     content: "";
     position: absolute;
-    top: 68px;
+    top: 0;
     left: 50%;
     margin-left: -50vw;
     width: 100vw;
     height: 1px;
     background-color: $border2;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-}
-
-.main-nav__list li:last-child {
-  margin: 0;
-}
-
-.main-nav__toggle {
-
-  &--nojs  {
-    display: none;
-  }
-
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  z-index: 2;
-  width: 25px;
-  height: 18px;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  background-image: url("../img/burger_menu.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  &--opened {
-    position: absolute;
-    top: 23px;
-    right: 20px;
-    z-index: 2;
-    width: 25px;
-    height: 20px;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    background-image: url("../img/close_menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 
     @media (min-width: $tablet-width) {
       display: none;
