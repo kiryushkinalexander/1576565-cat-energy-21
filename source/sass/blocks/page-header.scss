@@ -1,12 +1,91 @@
 .page-header {
+  padding-top: 12px;
+  position: relative;
+  padding-top: 24px;
+
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
+    padding-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 69px;
+  }
+
+  &--nojs {
+    .page-header__toggle {
+      display: none;
+    }
+
+    .page-header__nav {
+      display: block;
+    }
+  }
+
+  &--opened {
+    .page-header__nav {
+      display: block;
+    }
+
+    .page-header__toggle {
+      top: 23px;
+      height: 20px;
+      background-image: url("../img/close_menu.svg");
+      background-size: 20px;
+    }
   }
 }
 
 .page-header__logo {
+  position: relative;
+  display: block;
+  padding-bottom: 17px;
+
   @media (min-width: $tablet-width) {
-    margin-right: auto;
-    align-self: center;
+    padding: 0;
+    position: absolute;
+    content: "";
+    left: 4%;
+    top: 35%;
+    width: 174px;
+    height: 51px;
+    background-image: url("../img/logo-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 7%;
+    top: 45%;
+    width: 220px;
+    height: 65px;
+    background-image: url("../img/logo-desktop.svg");
+  }
+}
+
+
+.page-header__toggle {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 2;
+  width: 25px;
+  height: 18px;
+  outline: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/burger_menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 18px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

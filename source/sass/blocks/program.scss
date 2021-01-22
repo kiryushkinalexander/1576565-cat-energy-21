@@ -20,6 +20,7 @@
   margin: 0;
   text-align: center;
   margin-bottom: 29px;
+  padding-left: 49px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -28,21 +29,61 @@
     text-align: left;
     margin-bottom: 24px;
   }
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 73px;
+  }
+
+  &--pro {
+    text-align: right;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+
+    @media (min-width: $tablet-width) {
+      text-align: center;
+    }
+  }
 }
 
 .program__link {
+  position: relative;
+  display: block;
   font-family: $font-custom;
   color: $black;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
-  padding: 4px 49px 4px 0;
+  margin-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.program__link-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 10px;
+  left: 103px;
+
+  @media (min-width: $tablet-width) {
+    left: 130px;
+  }
 }
 
 .program__item {
+  position: relative;
   margin: 0;
-  padding: 21px 33px 18px 19px;
+  padding: 30px 33px 22px 20px;
   margin-bottom: 20px;
   background-color: $basic-grey;
 
@@ -51,7 +92,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 62px 53px 52px;
+    padding: 77px 279px 53px 52px;
     margin-bottom: 30px;
 
     &:last-child {
@@ -60,13 +101,68 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 51px 55px 52px;
-    width: 570px;
+    padding: 77px 51px 59px 52px;
     margin: 0;
 
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  &--slim::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 9%;
+    transform: translateY(9%);
+    background-image: url("../img/cat_back-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 17%;
+      right: 7%;
+      width: 200px;
+      height: 211px;
+      background-image: url("../img/cat_back-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 9%;
+      left: 9%;
+      width: 100px;
+      height: 106px;
+      background-image: url("../img/cat_back-desktop.svg");
+    }
+  }
+
+  &--pro::before {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 50px;
+    top: 9%;
+    transform: translateY(9%);
+    background-image: url("../img/cat_pro-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 17%;
+      right: 3%;
+      width: 268px;
+      height: 200px;
+      background-image: url("../img/cat_pro-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 9%;
+      left: 6%;
+      width: 134px;
+      height: 100px;
+      background-image: url("../img/cat_pro-desktop.svg");
     }
   }
 }
@@ -78,7 +174,8 @@
   line-height: 18px;
   margin: 0;
   padding: 0;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $border;
 
   @media (min-width: $tablet-width) {
     font-style: normal;
@@ -87,6 +184,7 @@
     line-height: 24px;
     text-align: left;
     margin-bottom: 52px;
+    border: none;
   }
 }
 
