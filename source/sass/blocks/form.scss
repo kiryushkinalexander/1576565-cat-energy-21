@@ -22,7 +22,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 180px;
+    top: 53px;
     left: 50%;
     margin-left: -50vw;
     width: 100vw;
@@ -271,6 +271,7 @@
 }
 
 .form__wrapper {
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding: 0 67px;
   }

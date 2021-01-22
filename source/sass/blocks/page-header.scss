@@ -1,7 +1,6 @@
 .page-header {
   padding-top: 12px;
   position: relative;
-  padding-top: 24px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -38,34 +37,7 @@
 }
 
 .page-header__logo {
-  position: relative;
   display: block;
-  padding-bottom: 17px;
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-    position: absolute;
-    content: "";
-    left: 4%;
-    top: 35%;
-    width: 174px;
-    height: 51px;
-    background-image: url("../img/logo-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    img {
-      display: none;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 7%;
-    top: 45%;
-    width: 220px;
-    height: 65px;
-    background-image: url("../img/logo-desktop.svg");
-  }
 }
 
 
