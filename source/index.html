@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -150,7 +150,7 @@
         </div>
         <div class="example__article">
           <ul class="example__list">
-            <li class="example__item">
+            <li class="example__item example__item-before">
               <p class="example__value">
                 5 кг
               </p>
@@ -158,7 +158,7 @@
                 снижение <br class="br--mobile"> веса
               </p>
             </li>
-            <li class="example__item">
+            <li class="example__item example__item-after">
               <p class="example__value">
                 60 дней
               </p>
@@ -174,7 +174,11 @@
         </div>
         <div class="example__slider">
           <div class="example__image">
-
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото котa">
+          </picture>
           </div>
           <div class="example__actions">
             <p class="example__button example__button--before">Было</p>
