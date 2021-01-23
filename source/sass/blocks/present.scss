@@ -1,23 +1,40 @@
 .present {
   position: relative;
-  height: 280px;
-  background-image: url("../img/present.jpg");
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 186px;
   padding-bottom: 43px;
+  background-color: $basic-green;
+
+    @include retina {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+    }
+
 
   @media (min-width: $tablet-width) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
     padding-top: 71px;
     padding-bottom: 69px;
     height: 200px;
+
+
+    @include retina {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     margin-left: auto;
     padding: 0;
+
+    @include retina {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
