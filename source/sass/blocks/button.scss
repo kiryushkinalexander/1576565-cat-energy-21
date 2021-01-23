@@ -12,4 +12,12 @@
   background-color: $basic-green;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: rgba($white, 0.6);
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }

@@ -22,7 +22,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 180px;
+    top: 53px;
     left: 50%;
     margin-left: -50vw;
     width: 100vw;
@@ -271,6 +271,7 @@
 }
 
 .form__wrapper {
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding: 0 67px;
   }
@@ -354,7 +355,7 @@
   position: relative;
 }
 
-.form__input--checkbox+.form__label--checkbox::before {
+.form__input--checkbox + .form__label--checkbox::before {
   position: absolute;
   content: "";
   top: -4px;
@@ -369,7 +370,7 @@
   }
 }
 
-.form__input--checkbox+.form__label--checkbox::after {
+.form__input--checkbox + .form__label--checkbox::after {
   display: none;
   position: absolute;
   content: "";
@@ -387,7 +388,7 @@
   }
 }
 
-.form__input--checkbox:checked+.form__label--checkbox::after {
+.form__input--checkbox:checked + .form__label--checkbox::after {
   display: block;
 }
 
@@ -407,7 +408,7 @@
   }
 }
 
-.form__input--radio+.form__label--radio::after {
+.form__input--radio + .form__label--radio::after {
   display: none;
   position: absolute;
   content: "";
@@ -428,6 +429,6 @@
   }
 }
 
-.form__input--radio:checked+.form__label--radio::after {
+.form__input--radio:checked + .form__label--radio::after {
   display: block;
 }
