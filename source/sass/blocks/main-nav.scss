@@ -28,6 +28,7 @@
 }
 
 .main-nav__link {
+  position: relative;
   font-family: $font-custom;
   color: $black;
   text-decoration: none;
@@ -40,6 +41,18 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+
+    &--active{
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $basic-green;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -48,44 +61,55 @@
 
     &--main {
       color: $white;
+
+      &::after {
+        background-color: $white;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
-  }
 
-  &:hover {
-    color: rgba($black, 0.6);
-  }
+    &:hover {
+      opacity: 0.6;
+    }
 
-  &:active {
-    color: rgba($black, 0.3);
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-.main-nav__item {
-  position: relative;
-  text-align: center;
-  padding: 24px 0 22px;
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-    margin-right: 35px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
-    height: 1px;
-    background-color: $border2;
+  .main-nav__item {
+    position: relative;
+    text-align: center;
+    padding: 24px 0 22px;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      padding: 0;
+      margin-right: 35px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: $border2;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
   }
-}

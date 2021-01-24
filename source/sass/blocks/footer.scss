@@ -79,11 +79,24 @@
   @media (min-width: $tablet-width) {
     padding-top: 65px;
     padding-bottom: 62px;
-    background-color: $basic-grey;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
     background-color: transparent;
+  }
+}
+
+
+.footer_icon {
+
+  fill: $icons-color;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    fill: rgba($basic-green, 0.3);
   }
 }
