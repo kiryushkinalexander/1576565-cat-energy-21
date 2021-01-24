@@ -271,7 +271,6 @@
 }
 
 .form__wrapper {
-
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding: 0 67px;
   }
@@ -392,7 +391,7 @@
   display: block;
 }
 
-.form__input--radio+.form__label--radio::before {
+.form__input--radio + .form__label--radio::before {
   position: absolute;
   content: "";
   top: -4px;

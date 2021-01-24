@@ -9,9 +9,9 @@
   padding-bottom: 43px;
   background-color: $basic-green;
 
-    @include retina {
-      background-image: url("../img/gift-photo-mobile@2x.jpg");
-    }
+  @include retina {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
 
   @media (min-width: $tablet-width) {
