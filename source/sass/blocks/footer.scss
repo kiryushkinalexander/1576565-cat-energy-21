@@ -28,6 +28,12 @@
   }
 }
 
+.footer__wrapper-contacts {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      padding: 0 67px;
+    }
+}
+
 .footer__title {
   font-family: $font-default;
   color: $special_dark-grey;
@@ -86,7 +92,6 @@
   display: flex;
   align-items: center;
   padding-top: 21px;
-  background-color: $white;
 
   @media (min-width: $tablet-width) {
     padding: 0;
