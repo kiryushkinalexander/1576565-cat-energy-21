@@ -1,8 +1,9 @@
 .form {
-  padding: 27px 0 32px;
+  overflow-x: hidden;
+  padding: 24px 0 32px;
 
   @media (min-width: $tablet-width) {
-    padding: 63px 0 72px;
+    padding: 61px 0 72px;
   }
 
   @media (min-width: $desktop-width) {
@@ -58,7 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
+    margin-bottom: 64px;
   }
 }
 
@@ -70,11 +71,11 @@
   padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 64px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 45px;
+    padding-bottom: 64px;
   }
 
   &--contacts {
@@ -85,16 +86,12 @@
     }
   }
 
-  &--radio {
-    padding-top: 29px;
-    padding-bottom: 47px;
-  }
 
   &--comment {
     padding-bottom: 26px;
 
     @media (min-width: $tablet-width) {
-      padding-bottom: 61px;
+      padding-bottom: 64px;
     }
   }
 
@@ -102,15 +99,10 @@
     padding-bottom: 37px;
   }
 
-  &--radio,
-  &--contacts {
-    @media (min-width: $desktop-width) {
-      width: calc(50% - 40px);
-      padding: 0;
-    }
-  }
-
   &--radio {
+
+    padding-top: 29px;
+    padding-bottom: 20px;
 
     &::before {
       content: "";
@@ -141,6 +133,14 @@
       }
     }
   }
+
+  &--radio,
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      width: calc(50% - 40px);
+      padding: 0;
+    }
+  }
 }
 
 .form__label {
@@ -155,6 +155,16 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--contacts {
+    @media (min-width: $tablet-width) {
+      margin-right: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+    }
   }
 
   &--email {
@@ -202,7 +212,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 12px 19px 14px 19px;
+    padding: 12px 17px 15px 17px;
 
     &::placeholder {
       font-size: 20px;
@@ -215,7 +225,38 @@
   }
 
   &:focus {
+    box-shadow: 0 0 0 1px $black;
     border: 1px solid $black;
+  }
+
+  &--error {
+    flex-grow: 1;
+    font-family: $font-custom;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 13px 19px 14px 15px;
+    border: 1px solid $error-color;
+    color: $special_dark-grey;
+    box-shadow: 0 0 0 1px $error-color;
+    outline: none;
+
+    &::placeholder {
+      color: $special_dark-grey;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 12px 17px 15px 17px;
+
+      &::placeholder {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
   }
 }
 
@@ -273,6 +314,7 @@
 }
 
 .form__legend {
+  position: relative;
   font-family: $font-custom;
   color: $black;
   font-size: 24px;
@@ -282,19 +324,60 @@
   padding: 0;
   margin-bottom: 31px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: calc(50vw - 140px);
+    width: calc(50vw + 140px);
+    height: 2px;
+    background-color: $basic-green;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      top: 20px;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 23px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
   }
 
   &--contacts {
-    padding-top: 26px;
+    padding-top: 54px;
 
+    &::after {
+      position: absolute;
+      top: 41px;
+      z-index: 2;
+      left: calc(50vw + 60px);
+      width: calc(50vw - 60px);
+
+      @media (min-width: $tablet-width) {
+        width: 100%;
+        top: 76px;
+        left: 0;
+        z-index: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 85px;
+      }
+    }
 
     @media (min-width: $desktop-width) {
-      padding-top: 44px;
+      padding-top: 62px;
     }
   }
 
@@ -305,16 +388,24 @@
       margin-bottom: 61px;
     }
   }
-
-  &--contacts,
-  &--comment,
-  &--checkbox {
-    border-bottom: 2px solid $basic-green;
-  }
 }
 
 .form__legend-text {
-  display: inline-block;
+  display: block;
+
+  span {
+    position: relative;
+    display: inline-flex;
+    background-color: $white;
+    padding-right: 24px;
+    z-index: 1;
+
+
+    @media (min-width: $tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
+  }
 }
 
 .form__textarea {
@@ -326,7 +417,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  padding: 15px 11px 0;
+  padding: 17px 13px 0;
   width: 100%;
   outline: none;
 
@@ -361,6 +452,10 @@
     text-align: left;
     padding-left: 31px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 41px;
+  }
 }
 
 .form__button {
@@ -376,7 +471,7 @@
     padding: 16px 35px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 568px;
   }
 }
@@ -419,10 +514,6 @@
 
   &:last-child {
     margin-bottom: 0;
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 20px;
-    }
   }
 
   &--desktop {
@@ -440,6 +531,7 @@
   transform: translateY(-50%);
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     right: 15px;
@@ -453,6 +545,14 @@
       width: 18px;
       height: 13px;
     }
+  }
+
+  &--email-disable {
+    fill: $basic-green;
+  }
+
+  &--email-error {
+    fill: $error-color;
   }
 
   &--phone {
@@ -481,6 +581,14 @@
     top: -4px;
     left: 2px;
   }
+
+  &:hover {
+    border: 1px solid $checkbox-hover;
+  }
+
+  &--disabled {
+    opacity: 0.6;
+  }
 }
 
 .form__input--checkbox + .form__label--checkbox::after {
@@ -498,6 +606,10 @@
   @media (min-width: $tablet-width) {
     top: 10px;
     left: 13px;
+  }
+
+  &--disabled {
+    opacity: 0.6;
   }
 }
 
@@ -526,6 +638,14 @@
     top: -5px;
     left: -18px;
   }
+
+  &:hover {
+    border: 1px solid $checkbox-hover;
+  }
+
+  &--disabled {
+    opacity: 0.6;
+  }
 }
 
 .form__input--radio + .form__label--radio::after {
@@ -549,7 +669,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: -6px;
+    left: -7px;
+    top: 6px;
+  }
+
+  &--disabled {
+    opacity: 0.6;
   }
 }
 
