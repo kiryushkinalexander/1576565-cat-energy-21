@@ -2,11 +2,11 @@
   padding: 27px 0 32px;
 
   @media (min-width: $tablet-width) {
-    padding: 75px 0 72px;
+    padding: 63px 0 72px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 87px 0 82px;
+    padding: 72px 0 82px;
   }
 }
 
@@ -22,7 +22,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 53px;
+    top: 68px;
     left: 50%;
     margin-left: -50vw;
     width: 100vw;
@@ -49,28 +49,96 @@
   color: $black;
   font-weight: normal;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 66px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
   }
 }
 
 .form__group {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 45px;
+  }
+
+  &--contacts {
+    padding-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &--radio {
+    padding-top: 29px;
+    padding-bottom: 47px;
+  }
+
+  &--comment {
+    padding-bottom: 26px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 61px;
+    }
+  }
+
+  &--checkbox {
+    padding-bottom: 37px;
+  }
 
   &--radio,
   &--contacts {
-    padding-top: 22px;
-
     @media (min-width: $desktop-width) {
       width: calc(50% - 40px);
       padding: 0;
+    }
+  }
+
+  &--radio {
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+
+    &::after,
+    &::before {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
   }
 }
@@ -87,6 +155,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--email {
+    margin-right: 7px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 19px;
+    }
   }
 
   &--radio {
@@ -126,6 +202,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 12px 19px 14px 19px;
 
     &::placeholder {
       font-size: 20px;
@@ -149,8 +226,8 @@
   @include list-style;
 
   @media (min-width: $tablet-width) {
-    padding-left: 27px;
-    padding-top: 20px;
+    padding-left: 45px;
+    padding-top: 29px;
     padding-bottom: 25px;
     border: 1px solid $border;
   }
@@ -159,16 +236,17 @@
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px 124px;
+      gap: 42px 57px;
       border: none;
       padding: 0;
-      padding-bottom: 59px;
+      padding-bottom: 24px;
     }
 
     @media (min-width: $desktop-width) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin-bottom: 0;
-      gap: 111px;
+      gap: 78px;
+      padding-bottom: 30px;
     }
   }
 }
@@ -182,9 +260,9 @@
   }
 
   &--checkbox {
-    margin-bottom: 27px;
+    margin-bottom: 23px;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       margin-bottom: 0;
     }
   }
@@ -202,7 +280,8 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 31px;
+
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -212,11 +291,30 @@
 
   &--contacts {
     padding-top: 26px;
+
+
+    @media (min-width: $desktop-width) {
+      padding-top: 44px;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 61px;
+    }
+  }
+
+  &--contacts,
+  &--comment,
+  &--checkbox {
+    border-bottom: 2px solid $basic-green;
   }
 }
 
 .form__legend-text {
-  display: block;
+  display: inline-block;
 }
 
 .form__textarea {
@@ -228,19 +326,26 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  padding: 9px 11px 0;
+  padding: 15px 11px 0;
   width: 100%;
   outline: none;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 9px 19px 0;
+    height: 174px;
   }
 
   &::placeholder {
     color: $special_dark-grey;
     font-size: 16px;
     line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -251,9 +356,10 @@
   margin: 0;
   text-align: center;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
     text-align: left;
-    padding-left: 81px;
+    padding-left: 31px;
   }
 }
 
@@ -264,9 +370,14 @@
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
+    width: 282px;
     font-size: 20px;
     margin-bottom: 0;
     padding: 16px 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 568px;
   }
 }
 
@@ -303,7 +414,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 
   &:last-child {
@@ -317,6 +428,7 @@
   &--desktop {
     @media (min-width: $desktop-width) {
       width: calc(50% - 40px);
+      margin-bottom: 0;
     }
   }
 }
@@ -343,7 +455,7 @@
     }
   }
 
-  &--prhone {
+  &--phone {
     width: 20px;
     height: 20px;
   }
@@ -357,7 +469,7 @@
 .form__input--checkbox + .form__label--checkbox::before {
   position: absolute;
   content: "";
-  top: -4px;
+  top: 0;
   left: 0;
   width: 30px;
   height: 30px;
@@ -366,6 +478,8 @@
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
+    top: -4px;
+    left: 2px;
   }
 }
 
@@ -373,7 +487,7 @@
   display: none;
   position: absolute;
   content: "";
-  top: 3px;
+  top: 7px;
   left: 7px;
   width: 18px;
   height: 14px;
@@ -382,8 +496,8 @@
   background-position: center;
 
   @media (min-width: $tablet-width) {
-    top: 9px;
-    left: 11px;
+    top: 10px;
+    left: 13px;
   }
 }
 
@@ -404,6 +518,13 @@
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
+    top: -4px;
+    left: -13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -5px;
+    left: -18px;
   }
 }
 
@@ -424,7 +545,11 @@
     height: 18px;
     background-image: url("../img/radiobutton_active-big.svg");
     top: 7px;
-    left: 11px;
+    left: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -6px;
   }
 }
 

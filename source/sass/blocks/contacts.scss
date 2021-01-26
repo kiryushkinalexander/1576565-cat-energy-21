@@ -13,9 +13,9 @@
     z-index: 1;
     position: absolute;
     background-color: $white;
-    left: 7%;
-    top: 15%;
-    padding: 62px 89px 51px 76px;
+    left: 8%;
+    top: 18%;
+    padding: 62px 89px 51px 72px;
     width: 570px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,6 +24,7 @@
 }
 
 .contacts__adress {
+  display: inline-block;
   font-family: $font-default;
   color: $black;
   font-size: 14px;
@@ -35,10 +36,19 @@
     width: 159px;
     font-size: 16px;
     line-height: 20px;
+
+    &--town {
+      margin-top: 19px;
+    }
+
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
-.contacts__slogan {
+.contacts__slogan-text {
   font-family: $font-custom;
   text-transform: uppercase;
   color: $black;

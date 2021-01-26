@@ -1,6 +1,14 @@
 .specification {
   position: relative;
-  padding-bottom: 42px;
+  padding-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 57px;
+  }
 }
 
 .specification__title {
@@ -28,13 +36,13 @@
   padding-left: 80px;
 
   @media (min-width: $tablet-width) {
-    padding: 103px 29px 57px 0;
+    padding: 110px 80px 53px 0;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 103px 0 57px;
+    padding: 109px 0 57px;
   }
 }
 
@@ -53,7 +61,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 18px 137px;
+    grid-gap: 83px 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,12 +84,17 @@
       counter-increment: counter;
       content: counter(counter);
       position: absolute;
-      bottom: -12px;
-      right: 0;
+      bottom: -9px;
+      right: 84px;
       font-size: 280px;
       line-height: 280px;
       color: $basic-grey;
       z-index: -1;
+
+      @media (min-width: $desktop-width) {
+        right: 0;
+        bottom: -3px;
+      }
     }
   }
 
