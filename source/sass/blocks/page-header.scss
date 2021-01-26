@@ -5,7 +5,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    padding-top: 42px;
+    padding-top: 23px;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,6 +38,11 @@
 
 .page-header__logo {
   display: block;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 
   img:hover {
     opacity: 0.6;
@@ -50,7 +55,7 @@
 
 .page-header__toggle {
   position: absolute;
-  top: 25px;
+  top: 24px;
   right: 20px;
   z-index: 2;
   width: 25px;

@@ -6,16 +6,16 @@
 
 .footer__info {
   background-color: $basic-grey;
-  padding-top: 39px;
+  padding-top: 35px;
   padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 61px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 57px;
+    padding-top: 50px;
     padding-bottom: 58px;
   }
 }
@@ -35,6 +35,10 @@
   line-height: 18px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .footer__logo {
@@ -72,13 +76,13 @@
 }
 
 .footer__contacts {
-  padding-top: 28px;
+  padding-top: 31px;
   padding-bottom: 28px;
 
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
-    padding-bottom: 62px;
+    padding-top: 67px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -88,8 +92,7 @@
 }
 
 
-.footer_icon {
-
+.footer__icon {
   fill: $icons-color;
 
   &:hover {
@@ -99,4 +102,41 @@
   &:active {
     fill: rgba($basic-green, 0.3);
   }
+
+
+  &--vk {
+    width: 22px;
+    height: 13px;
+
+    @media (min-width: $tablet-width) {
+      width: 29px;
+      height: 17px;
+    }
+  }
+
+  &--insta {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--facebook {
+    width: 10px;
+    height: 18px;
+
+    @media (min-width: $tablet-width) {
+      width: 13px;
+      height: 27px;
+    }
+  }
+
+  &--academy {
+    width: 27px;
+    height: 34px;
+  }
+
 }

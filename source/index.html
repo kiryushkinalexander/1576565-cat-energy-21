@@ -72,9 +72,9 @@
             Energy Slim поможет вашему
             питомцу сбросить лишний вес.
           </p>
-          <a class="program__link" href="#">
+          <a class="program__link">
             <svg class="program__link-image" width="32" height="12">
-            <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
+              <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
             </svg>
             Каталог Slim
           </a>
@@ -88,8 +88,8 @@
             вашему коту нарастить
             необходимые мышцы.
           </p>
-          <a class="program__link" href="#">
-            <svg class="program__link-image" width="32" height="12">
+          <a class="program__link">
+            <svg class="program__link-image program__link-image--pro" width="32" height="12">
               <use xlink:href="img/sprite.svg#icon-right-arrow-long"></use>
             </svg>
             Каталог Pro
@@ -145,21 +145,21 @@
           </p>
           <div class="example__article">
             <ul class="example__list">
-              <li class="example__item example__item-before">
-                <p class="example__value">
+              <li class="example__item example__item--before">
+                <span class="example__value">
                   5 кг
-                </p>
-                <p class="example__description">
-                  снижение <br class="br--mobile"> веса
-                </p>
+                </span>
+                <span class="example__description  example__description--padding">
+                  снижение веса
+                </span>
               </li>
-              <li class="example__item example__item-after">
-                <p class="example__value">
+              <li class="example__item example__item--after">
+                <span class="example__value">
                   60 дней
-                </p>
-                <p class="example__description">
-                  затрачено <br class="br--mobile"> времени
-                </p>
+                </span>
+                <span class="example__description">
+                  затрачено времени
+                </span>
               </li>
             </ul>
             <dl class="example__result">
@@ -174,7 +174,8 @@
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото котa">
+                <img class="example__picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
+                  alt="Фото котa">
               </picture>
             </div>
             <div class="example__image--after">
@@ -201,15 +202,21 @@
     <div class="footer__contacts">
       <div class="wrapper form__wrapper">
         <div class="contacts">
-          <p class="contacts__slogan">
+          <div class="contacts__slogan">
+          <span class="contacts__slogan-text">
             приглашаем
             к сотрудничеству дилеров!
-          </p>
-          <p class="contacts__adress">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
-          </p>
+          </span>
+          </div>
+          <div>
+            <span class="contacts__adress">
+              ул. Большая
+              Конюшенная, д. 19/8
+            </span>
+            <span class="contacts__adress contacts__adress--town">
+              Санкт-Петербург
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -228,7 +235,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Ссылка на Вконтакте</span>
-              <svg class="footer_icon" width="23" height="16">
+              <svg class="footer__icon footer__icon--vk" width="23" height="16">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
@@ -236,7 +243,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Ссылка на Инстаграмм</span>
-              <svg class="footer_icon" width="16" height="16">
+              <svg class="footer__icon footer__icon--insta" width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
@@ -244,7 +251,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Ссылка на Фейсбук</span>
-              <svg class="footer_icon" width="22" height="22">
+              <svg class="footer__icon footer__icon--facebook" width="22" height="22">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
@@ -254,7 +261,7 @@
           <p class="footer__title">HTML Academy</p>
           <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <span class="visually-hidden">Ссылка на htmlacademy</span>
-            <svg class="footer_icon" width="27" height="34">
+            <svg class="footer__icon footer__icon--academy" width="27" height="34">
               <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>

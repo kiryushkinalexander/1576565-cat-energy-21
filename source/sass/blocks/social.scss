@@ -6,29 +6,30 @@
   flex-wrap: wrap;
   align-items: center;
   padding-left: 74px;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding-top: 21px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $border;
 
   @media (min-width: $tablet-width) {
-    width: 129px;
+    width: 145px;
     padding: 0;
+    padding-left: 20px;
     border-bottom: none;
   }
 }
 
 .social__item {
-  margin-right: 37px;
+  margin-left: 37px;
 
-  &:last-child {
-    margin-right: 0;
+  &:first-child {
+    margin-left: 0;
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 29px;
+    margin-left: 29px;
 
-    &:last-child {
-      margin-right: 0;
+    &:first-child {
+      margin-left: 0;
     }
   }
 }
