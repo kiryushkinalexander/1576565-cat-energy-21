@@ -1,5 +1,6 @@
 .map {
   height: 362px;
+  position: relative;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,6 +24,14 @@
 
     @include retina {
       background-image: url("../img/bg-map-desktop@2x.png");
+    }
+  }
+
+  iframe {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      height: 400px;
     }
   }
 }

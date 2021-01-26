@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2"crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -52,19 +54,19 @@
         <fieldset class="form__group form__group--contacts">
           <legend class="visually-hidden">Введите ваши данные</legend>
           <p class="form__field">
-            <label class="form__label" for="name">
+            <label class="form__label form__label--contacts" for="name">
               имя: <sup>*</sup>
             </label>
             <input class="form__input" id="name" type="text" placeholder="барсик">
           </p>
           <p class="form__field">
-            <label class="form__label" for="weight">
+            <label class="form__label form__label--contacts" for="weight">
               вес(кг): <sup>*</sup>
             </label>
             <input class="form__input" id="weight" type="text" placeholder="7">
           </p>
           <p class="form__field">
-            <label class="form__label" for="age">
+            <label class="form__label form__label--contacts" for="age">
               возраст(лет):
             </label>
             <input class="form__input" id="age" type="text" placeholder="7">
@@ -92,8 +94,10 @@
       <fieldset class="form__group">
         <legend class="form__legend form__legend--contacts">
           <span class="form__legend-text form__wrapper wrapper">
-            Контактные данные
-            (владельца кота)
+            <span>
+              Контактные данные
+              (владельца кота)
+            </span>
           </span>
         </legend>
         <div class="form__wrapper wrapper wrapper--flex">
@@ -102,14 +106,8 @@
               e-mail: <sup>*</sup>
             </label>
             <input class="form__input form__input--email" id="email" type="email" placeholder="kuklachev@gmail.com">
-            <svg class="form__field-image form__field-image--email" width="20" height="15" viewBox="0 0 20 15"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
-              <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
-              <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3" />
-              <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3" />
-              <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z" stroke="#222222"
-                stroke-width="1.3" />
+            <svg class="form__field-image form__field-image--email" width="20" height="15">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
           </p>
           <p class="form__field form__field--desktop">
@@ -139,7 +137,7 @@
       <fieldset class="form__group form__group--comment">
         <legend class="form__legend form__legend--comment">
           <span class="form__legend-text form__wrapper wrapper">
-            Комментарий
+            <span>Комментарий</span>
           </span>
         </legend>
         <div class="form__wrapper wrapper">
@@ -152,7 +150,7 @@
       <fieldset class="form__group form__group--checkbox">
         <legend class="form__legend form__legend--checkbox">
           <span class="form__legend-text form__wrapper wrapper">
-            Дополнительно
+            <span>Дополнительно</span>
           </span>
         </legend>
         <div class="form__wrapper wrapper">
@@ -197,7 +195,7 @@
   </main>
 
   <footer class="page__footer footer">
-    <div class="footer__contacts">
+    <div class="footer__contacts footer__contacts--main footer__contacts--form">
       <div class="wrapper form__wrapper">
         <div class="contacts">
           <div class="contacts__slogan">
@@ -219,7 +217,7 @@
       </div>
     </div>
     <div class="map">
-
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15988.299089562137!2d30.325890524111944!3d59.93981822408038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607985348557!5m2!1sru!2sru" height="362" style="border:0;" aria-label="Адрес офиса: Санкт-Петербург, ул.Большая Конюшенная, 19/8" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <div class="footer__info">
       <div class="wrapper footer__wrapper">
@@ -259,15 +257,15 @@
           <p class="footer__title">HTML Academy</p>
           <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <span class="visually-hidden">Ссылка на htmlacademy</span>
-            <svg class="footer__icon footer__icon--academy" width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-            </svg>
+              <svg class="footer__icon footer__icon--academy" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="currentColor"/>
+                </svg>
           </a>
         </div>
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
