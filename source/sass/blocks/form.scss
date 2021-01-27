@@ -260,6 +260,17 @@
   }
 }
 
+.form__input--email:disabled,
+.form__input--phone:disabled {
+  border: 1px solid $black;
+  box-shadow: 0 0 0 1px $black;
+}
+
+.form__input--email:disabled + .form__field-image,
+.form__input--phone:disabled + .form__field-image {
+  fill: $basic-green;
+}
+
 .form__list {
   margin: 0;
   padding: 0;
@@ -576,20 +587,13 @@
   width: 30px;
   height: 30px;
   border: 1px solid $special-grey;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
     top: -4px;
     left: 2px;
-  }
-
-  &:hover {
-    border: 1px solid $checkbox-hover;
-  }
-
-  &--disabled {
-    opacity: 0.6;
   }
 }
 
@@ -604,14 +608,11 @@
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     top: 10px;
     left: 13px;
-  }
-
-  &--disabled {
-    opacity: 0.6;
   }
 }
 
@@ -628,6 +629,7 @@
   height: 30px;
   border: 1px solid $special-grey;
   border-radius: 50%;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 40px;
@@ -639,14 +641,6 @@
   @media (min-width: $desktop-width) {
     top: -5px;
     left: -18px;
-  }
-
-  &:hover {
-    border: 1px solid $checkbox-hover;
-  }
-
-  &--disabled {
-    opacity: 0.6;
   }
 }
 
@@ -661,6 +655,7 @@
   background-image: url("../img/radiobutton_active.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 18px;
@@ -674,12 +669,20 @@
     left: -7px;
     top: 6px;
   }
-
-  &--disabled {
-    opacity: 0.6;
-  }
 }
 
 .form__input--radio:checked + .form__label--radio::after {
   display: block;
+}
+
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--radio:hover + .form__label--radio::before {
+  border: 1px solid $checkbox-hover;
+}
+
+.form__input--checkbox:disabled + .form__label--checkbox::after,
+.form__input--checkbox:disabled + .form__label--checkbox::before,
+.form__input--radio:disabled + .form__label--radio::after,
+.form__input--radio:disabled + .form__label--radio::before {
+  opacity: 0.3;
 }

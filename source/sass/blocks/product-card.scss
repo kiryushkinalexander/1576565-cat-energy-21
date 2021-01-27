@@ -153,5 +153,14 @@
     line-height: 20px;
     color: $special_dark-grey;
     background-color: $basic-grey;
+
+    &:hover {
+      color: $special_dark-grey;
+      background-color: $border2;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
