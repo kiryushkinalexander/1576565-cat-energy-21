@@ -547,11 +547,13 @@
     }
   }
 
-  &--email-disable {
+  &--email-disabled,
+  &--phone-disabled {
     fill: $basic-green;
   }
 
-  &--email-error {
+  &--email-error,
+  &--phone-error {
     fill: $error-color;
   }
 

@@ -29,9 +29,9 @@
 }
 
 .footer__wrapper-contacts {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      padding: 0 67px;
-    }
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding: 0 67px;
+  }
 }
 
 .footer__title {

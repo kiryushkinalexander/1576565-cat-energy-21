@@ -20,15 +20,15 @@
       content: none;
     }
 
-    @media (min-width: $desktop-width) {
-      content: "";
-      background-image: url("../img/index-background.jpg");
-      height: 694px;
-      width: 50%;
-      right: 0;
-      transform: none;
-      top: -113px;
-    }
+    // @media (min-width: $desktop-width) {
+    //   content: "";
+    //   background-image: url("../img/index-background.jpg");
+    //   height: 694px;
+    //   width: 50%;
+    //   right: 0;
+    //   transform: none;
+    //   top: -113px;
+    // }
   }
 
   @media (min-width: $tablet-width) {
@@ -122,6 +122,7 @@
 
 .promo__image {
   position: absolute;
+  content: "";
   z-index: -1;
   right: 50%;
   top: 35%;
