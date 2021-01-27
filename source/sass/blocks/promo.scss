@@ -2,12 +2,22 @@
   position: relative;
   padding-bottom: 22px;
 
-  &::before {
+
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 267px;
+  }
+}
+
+.promo__top-image {
     position: absolute;
     z-index: -1;
     content: "";
     background-color: $basic-green;
-    background-image: url("../img/promo-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,27 +27,8 @@
     width: 320px;
 
     @media (min-width: $tablet-width) {
-      content: none;
+      display: none;
     }
-
-    // @media (min-width: $desktop-width) {
-    //   content: "";
-    //   background-image: url("../img/index-background.jpg");
-    //   height: 694px;
-    //   width: 50%;
-    //   right: 0;
-    //   transform: none;
-    //   top: -113px;
-    // }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 526px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 267px;
-  }
 }
 
 .promo__wrapper {

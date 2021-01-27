@@ -1,0 +1,21 @@
+.page__header {
+  position: relative;
+}
+
+.page__header-image {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 694px;
+    background-color: $basic-green;
+    width: 50%;
+    right: 0;
+    transform: none;
+    top: 0;
+    z-index: -1;
+    background-position: right bottom;
+  }
+}
